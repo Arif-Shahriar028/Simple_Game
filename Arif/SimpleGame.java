@@ -22,7 +22,7 @@ public class SimpleGame extends JFrame implements ActionListener{
     private JButton button1,button2,button3,button4,button5,button6;
     private ImageIcon button_picture;
     private int total_point = 0, attempt = 0;
-	private int p2 =0, p3 =0, p4 =0, police, babu, chur;
+    private int p2 =0, p3 =0, p4 =0, police, babu, chur;
     
     public SimpleGame()
     {
@@ -33,9 +33,8 @@ public class SimpleGame extends JFrame implements ActionListener{
         setIcons();
         setButton();
         setActionListener();
-		setPlayerField();
-        
-    
+	setPlayerField();
+         
     }
     
     public void setFrame()
@@ -59,10 +58,10 @@ public class SimpleGame extends JFrame implements ActionListener{
         textfield11.setFont(new Font("Times New Roman",Font.BOLD,20));
         textfield11.setHorizontalAlignment(JTextField.CENTER);
         textfield11.setEditable(false);
-		textfield11.setText("You");
+	textfield11.setText("You");
         c.add(textfield11);
 		
-		textfield1 = new JTextField();
+	textfield1 = new JTextField();
         textfield1.setBounds(730, 100, 150, 55);
         textfield1.setFont(new Font("Times New Roman",Font.BOLD,20));
         textfield1.setHorizontalAlignment(JTextField.CENTER);
@@ -76,81 +75,81 @@ public class SimpleGame extends JFrame implements ActionListener{
         textfield2.setEditable(false);
         c.add(textfield2);
 		
-		textfield3 = new JTextField();
+	textfield3 = new JTextField();
         textfield3.setBounds(50, 370, 400, 55);
         textfield3.setFont(new Font("Times New Roman",Font.BOLD,20));
         textfield3.setHorizontalAlignment(JTextField.CENTER);
         textfield3.setEditable(false);
-		textfield3.setText("Your Turn");
+	textfield3.setText("Your Turn");
         c.add(textfield3);
 		
 		
-		textfield12 = new JTextField();
+	textfield12 = new JTextField();
         textfield12.setBounds(50, 25, 200, 55);
         textfield12.setFont(new Font("Times New Roman",Font.BOLD,20));
         textfield12.setHorizontalAlignment(JTextField.CENTER);
         textfield12.setEditable(false);
-		textfield12.setText("Turn NO:");
+	textfield12.setText("Turn NO:");
         c.add(textfield12);
 		
     }
 	
 	public void setPlayerField()
 	{
-		textfield4 = new JTextField();
+	textfield4 = new JTextField();
         textfield4.setBounds(570, 200, 160, 55);
         textfield4.setFont(new Font("Times New Roman",Font.BOLD,20));
         textfield4.setHorizontalAlignment(JTextField.CENTER);
         textfield4.setEditable(false);
-		textfield4.setText("2nd player");
+	textfield4.setText("2nd player");
         c.add(textfield4);
 		
-		textfield5 = new JTextField();
+	textfield5 = new JTextField();
         textfield5.setBounds(730, 200, 150, 55);
         textfield5.setFont(new Font("Times New Roman",Font.BOLD,20));
         textfield5.setHorizontalAlignment(JTextField.CENTER);
         textfield5.setEditable(false);
-		textfield5.setText("");
+	textfield5.setText("");
         c.add(textfield5);
 		
-		textfield6 = new JTextField();
+	textfield6 = new JTextField();
         textfield6.setBounds(570, 300, 160, 55);
         textfield6.setFont(new Font("Times New Roman",Font.BOLD,20));
         textfield6.setHorizontalAlignment(JTextField.CENTER);
         textfield6.setEditable(false);
-		textfield6.setText("3rd player");
+	textfield6.setText("3rd player");
         c.add(textfield6);
 		
-		textfield7 = new JTextField();
+	textfield7 = new JTextField();
         textfield7.setBounds(730, 300, 150, 55);
         textfield7.setFont(new Font("Times New Roman",Font.BOLD,20));
         textfield7.setHorizontalAlignment(JTextField.CENTER);
         textfield7.setEditable(false);
-		textfield7.setText("");
+	textfield7.setText("");
         c.add(textfield7);
 		
-		textfield8 = new JTextField();
+	textfield8 = new JTextField();
         textfield8.setBounds(570, 400, 160, 55);
         textfield8.setFont(new Font("Times New Roman",Font.BOLD,20));
         textfield8.setHorizontalAlignment(JTextField.CENTER);
         textfield8.setEditable(false);
-		textfield8.setText("4th player");
+	textfield8.setText("4th player");
         c.add(textfield8);
 		
-		textfield9 = new JTextField();
+	textfield9 = new JTextField();
         textfield9.setBounds(730, 400, 150, 55);
         textfield9.setFont(new Font("Times New Roman",Font.BOLD,20));
         textfield9.setHorizontalAlignment(JTextField.CENTER);
         textfield9.setEditable(false);
-		textfield9.setText("");
+	textfield9.setText("");
         c.add(textfield9);
 		
-		textfield10 = new JTextField();
+	textfield10 = new JTextField();
         textfield10.setBounds(650, 25, 150, 55);
         textfield10.setFont(new Font("Times New Roman",Font.BOLD,20));
         textfield10.setHorizontalAlignment(JTextField.CENTER);
         textfield10.setEditable(false);
-		textfield10.setText("Point Table");
+	textfield10.setText("Point Table");
         c.add(textfield10);
 	}
 
@@ -219,7 +218,7 @@ public class SimpleGame extends JFrame implements ActionListener{
     
     public void actionPerformed(ActionEvent ae) 
     {
-		textfield3.setText("Your Turn");
+	textfield3.setText("Your Turn");
 		
         if(ae.getSource()==button1||ae.getSource()==button2||ae.getSource()==button3||ae.getSource()==button4)
         {
@@ -233,67 +232,67 @@ public class SimpleGame extends JFrame implements ActionListener{
             
             if(random_number==0)
             {
-				textfield3.setText("");
+		textfield3.setText("");
                 JOptionPane.showMessageDialog(null,"Congratulations You are BABU and Got 1000 Points");
                 total_point = total_point + 1000;
                 textfield1.setText(""+total_point);
-				this.YouBabu();
-				textfield3.setText("Your turn");
+		this.YouBabu();
+		textfield3.setText("Your turn");
             }
             else if(random_number==1)
             {
-				textfield3.setText("");
+		textfield3.setText("");
                 JOptionPane.showMessageDialog(null,"Congratulations You are Police Now Find Chur and Dakat");
                 panel1.setVisible(false);
                 panel2.setVisible(true);
-				textfield3.setText("Guess Chur or Dakat");
+		textfield3.setText("Guess Chur or Dakat");
             }
             else if(random_number==2)
             {
-			   textfield3.setText("Computer's turn");
+	       textfield3.setText("Computer's turn");
                JOptionPane.showMessageDialog(null,"Hey Dirty Fellow You are a Chur So Keep Silent");
                if(checkHim()==0)
                {
                   JOptionPane.showMessageDialog(null,"So Sad!!! You Are Caught");
                   total_point = total_point + 0;
                   textfield1.setText(""+total_point);
-				  chur = 0;
-				  this.YouChur();
-				  textfield3.setText("Your turn");
+		  chur = 0;
+		  this.YouChur();
+		  textfield3.setText("Your turn");
                }
                else
                {
                   JOptionPane.showMessageDialog(null,"Congratulations You Are Safe");
                   total_point = total_point + 600;
                   textfield1.setText(""+total_point);
-				  chur = 1;
-				  this.YouChur();
-				  textfield3.setText("Your turn");
+		  chur = 1;
+		  this.YouChur();
+		  textfield3.setText("Your turn");
                }
             }
             else if(random_number==3)
             {   
                 textfield3.setText("");		
-               JOptionPane.showMessageDialog(null,"Hey Dirty Fellow You are a Dakat So Keep Silent");
-			   textfield3.setText("Computer's turn");
+                JOptionPane.showMessageDialog(null,"Hey Dirty Fellow You are a Dakat So Keep Silent");
+	        textfield3.setText("Computer's turn");
 			   
                if(checkHim()==0)
                {
                   JOptionPane.showMessageDialog(null,"So Sad!!! You Are Caught");
                   total_point = total_point + 0;
                   textfield1.setText(""+total_point);
-				  chur = 0;
-				  this.YouChur();
+		  chur = 0;
+		  this.YouChur();
                }
                else
                {
                   JOptionPane.showMessageDialog(null,"Congratulations You Are Safe");
                   total_point = total_point + 800;
                   textfield1.setText(""+total_point);
-				  chur = 1;
-				  this.YouChur();
+		  chur = 1;
+		  this.YouChur();
                }
-			   textfield3.setText("Your Turn");
+	   textfield3.setText("Your Turn");
                
             }
         }
@@ -352,8 +351,8 @@ public class SimpleGame extends JFrame implements ActionListener{
 						p2 = p2+500;
 						textfield5.setText(""+p2);
 					}
-                       
-                    else if(person==1)
+                        
+                                        else if(person==1)
 					{
 						p3 = p3+500;
 						textfield7.setText(""+p3);
@@ -384,7 +383,7 @@ public class SimpleGame extends JFrame implements ActionListener{
 						textfield5.setText(""+p2);
 					}
                        
-                    else if(person==1)
+                                        else if(person==1)
 					{
 						p3 = p3+1000;
 						textfield7.setText(""+p3);
@@ -413,7 +412,7 @@ public class SimpleGame extends JFrame implements ActionListener{
 		 {
 			 if(babu==0)
 			{
-				p2 = p2+1000;
+			    p2 = p2+1000;
 			    textfield5.setText(""+p2);
 			}
                        
@@ -432,13 +431,13 @@ public class SimpleGame extends JFrame implements ActionListener{
 		 if(chur == 0)
 		 {
 			JOptionPane.showMessageDialog(null, "Player "+(police+2)+  " is Police and guess Right");
-            if(police==0)
+                        if(police==0)
 			{
-				p2 = p2+1000;
+			    p2 = p2+1000;
 			    textfield5.setText(""+p2);
 			}
                        
-            else if(police==1)
+                        else if(police==1)
 			{
 				p3 = p3+1000;
 				textfield7.setText(""+p3);
@@ -459,8 +458,8 @@ public class SimpleGame extends JFrame implements ActionListener{
     public static void main(String[] args) 
     {
        SimpleGame frame = new SimpleGame();
-	   frame.setLocationRelativeTo(null);
-	   frame.setTitle("~~~ CHUR dhoren , DAKAT maren~~~");
+       frame.setLocationRelativeTo(null);
+       frame.setTitle("~~~ CHUR dhoren , DAKAT maren~~~");
        frame.setVisible(true);
     }
       
